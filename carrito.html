@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffde7;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ffb4b4;
+      padding: 20px;
+      text-align: center;
+    }
+.inicio {
+      max-width: 600px;
+      margin: 30px auto;
+      background-color: #f5cfbd;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #f06292;
+    }
+    .catalogo {
+      max-width: 600px;
+      margin: 30px auto;
+      background-color: #f5cfbd;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #f06292;
+    }
+.descuento {
+      max-width: 600px;
+      margin: 30px auto;
+      background-color: #f5cfbd;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #f06292;
+    }
+    .carrito{
+      max-width: 600px;
+      margin: 30px auto;
+      background-color: #f5cfbd;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #f06292;
+    }
+  </style>
+</head>
+<body bgcolor="f7d8dd">
+	 <header>
+  <img src="imagenes/NIRC.png" alt="Logo" class="logo" />
+   <nav>
+    <div class="inicio"><a href="index.html">Inicio</a></div>
+    <div class="catalogo"><a href="productos.html">Catalogo</a></div>
+    <div class="descuento"><a href="descr.html">Descuentos</a></div>
+    <div class="carrito"><a href="carrito.html">Carritos</a></div>
+
+  </nav>
+</header>
+<!-- CARRITO -->
+  <section>
+    <div class="carrito">
+      <h2>Carrito de Compras</h2>
+      <ul id="items-carrito"></ul>
+      <p><strong>Total: $<span id="total">0</span></strong></p>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <p>Escríbenos para más información o para hacer tu pedido.</p>
+    <form>
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo" required />
+      <textarea placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy;2025 BOHO todos los derechos recervados</p>
+  </footer>
+
+  <script>
+    let total = 0;
+
+    function agregarAlCarrito(nombre, precio) {
+      const lista = document.getElementById('items-carrito');
+
+      const item = document.createElement('li');
+      item.textContent = `${nombre} - $${precio}`;
+
+      const botonEliminar = document.createElement('button');
+      botonEliminar.textContent = 'eliminar';
+      botonEliminar.style.marginLeft = '10px';
+      botonEliminar.onclick = function () {
+        lista.removeChild(item);
+        total -= precio;
+        document.getElementById('total').textContent = total.toFixed(2);
+      };
+
+      item.appendChild(botonEliminar);
+      lista.appendChild(item);
+
+      total += precio;
+      document.getElementById('total').textContent = total.toFixed(2);
+    }
+  </script>
+</body>
+</html>
