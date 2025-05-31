@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>index</title>
+  <title>Inicio | BOHO</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,61 +11,101 @@
       margin: 0;
       padding: 0;
     }
+
     header {
       background-color: #ffb4b4;
       padding: 20px;
       text-align: center;
     }
-    .inicio {
-      max-width: 600px;
-      margin: 30px auto;
-      background-color: #f5cfbd;
-      padding: 20px;
-      border-radius: 10px;
-      border: 2px solid #f06292;
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
     }
-    .catalogo {
-      max-width: 600px;
-      margin: 30px auto;
-      background-color: #f5cfbd;
-      padding: 20px;
-      border-radius: 10px;
-      border: 2px solid #f06292;
+
+    header p.eslogan {
+      margin-top: 10px;
+      font-style: italic;
+      color: #555;
     }
-.descuento {
-      max-width: 600px;
-      margin: 30px auto;
-      background-color: #f5cfbd;
-      padding: 20px;
-      border-radius: 10px;
-      border: 2px solid #f06292;
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
     }
-    .carrito{
-      max-width: 600px;
-      margin: 30px auto;
+
+    nav a {
       background-color: #f5cfbd;
-      padding: 20px;
+      padding: 12px 20px;
       border-radius: 10px;
       border: 2px solid #f06292;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #f8bfa5;
+    }
+
+    .contenido {
+      max-width: 700px;
+      margin: 30px auto;
+      background-color: #fef0ef;
+      padding: 30px;
+      border-radius: 15px;
+      border: 2px solid #f06292;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .contenido p {
+      font-size: 18px;
+      color: #444;
+    }
+
+    .contenido a {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #f5cfbd;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: 2px solid #f06292;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contenido a:hover {
+      background-color: #f8bfa5;
     }
   </style>
 </head>
 <body>
-     <header>
-  <nav>
-    <div class="inicio"><a href="index.html">Inicio</a></div>
-    <div class="catalogo"><a href="boho.html">Catalogo</a></div>
-    <div class="carrito"><a href="carrito.html">Carritos</a></div>
-	       <div class="carrito"><a href="contactos.html">Contacto</a></div>
-
-
-  </nav>
-</header>
 
   <header>
-    
-    <h1>inicio</h1>
-    <center><i>BIENVEDIOD A BOHO</i></center>
-    <p>BOHO es una tienda de orquillas para el cabello, nuestras orquillas estan echas para todo tipo de pelo, sus diñesoa son tanto elegantes como casuales</p>
-    <a href="index.html">← Volver a la tienda</a>
+    <h1>BOHO</h1>
+    <p class="eslogan">"Tu estilo comienza desde el cabello"</p>
+
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="boho.html">Catálogo</a>
+      <a href="carrito.html">Carrito</a>
+      <a href="contactos.html">Contacto</a>
+    </nav>
   </header>
+
+  <section class="contenido">
+    <h2>Bienvenido a BOHO</h2>
+    <p>
+      BOHO es una tienda especializada en horquillas para el cabello. Nuestras horquillas están hechas para todo tipo de cabello, con diseños tanto elegantes como casuales. 
+    </p>
+    <a href="boho.html">Explorar el catálogo</a>
+  </section>
+
+</body>
+</html>
